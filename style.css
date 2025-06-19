@@ -419,28 +419,15 @@ html {
 /* SECTION START  */
 
 .reserve {
-  width: 100%;
-  height: 60vh;
-  background: url(img/reservation-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  margin-top: 5rem;
-  margin-bottom: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin: 4rem 0;
 }
 
 .reserveBox {
-  width: 35rem;
-  height: auto;
-  background-color: #f7f8f9;
-  position: absolute;
-  left: 10rem;
-  top: 10rem;
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-  box-shadow: 1px 1px 10px 1px gray;
+ background-color: #f4ede5;
+ padding: 2rem 1rem;
 }
 
 .reserveBox p {
@@ -484,34 +471,32 @@ html {
 
 .reserveBtn {
   width: max-content;
-  background-color: #ff0000da;
+  background-color: lightslategray;
   color: white;
   font-size: 15px;
-  display: flex;
   margin: auto;
   border: none;
   outline: none;
   padding: 1rem 2rem;
   border-radius: 2rem;
-  box-shadow: 1px 1px 5px red;
+  box-shadow: 1px 1px 5px gray;
   transition: 0.3s;
-  font-weight: 600;
+  margin: auto;
 }
 
 .reserveBtn:hover {
-  background-color: red;
+  background-color: gray;
   box-shadow: none;
 }
 
-@media (max-width: 1000px) {
-  .reserveBox {
-    width: 70%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .flex {
-    flex-direction: column;
+.reserve img{
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width:1000px){
+  .reserve{
+    grid-template-columns: 1fr;
   }
 }
 
